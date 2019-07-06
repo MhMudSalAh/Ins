@@ -320,9 +320,8 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Story" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzj-xE-jPf">
-                                                                <rect key="frame" x="0.0" y="85" width="80" height="30"/>
+                                                                <rect key="frame" x="0.0" y="85" width="90" height="30"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="80" id="8QZ-Vg-TlT"/>
                                                                     <constraint firstAttribute="height" constant="30" id="BAI-Dq-XTT"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -332,9 +331,10 @@
                                                         </subviews>
                                                     </view>
                                                     <constraints>
-                                                        <constraint firstItem="hzj-xE-jPf" firstAttribute="leading" secondItem="l72-yo-HOQ" secondAttribute="leading" id="81H-P9-QQm"/>
+                                                        <constraint firstAttribute="trailing" secondItem="hzj-xE-jPf" secondAttribute="trailing" id="0mp-1s-F0c"/>
                                                         <constraint firstItem="QqI-RX-T10" firstAttribute="leading" secondItem="l72-yo-HOQ" secondAttribute="leading" id="CUe-TH-QcP"/>
                                                         <constraint firstAttribute="bottomMargin" secondItem="hzj-xE-jPf" secondAttribute="bottom" constant="5" id="MmI-Lk-c1a"/>
+                                                        <constraint firstItem="hzj-xE-jPf" firstAttribute="leading" secondItem="l72-yo-HOQ" secondAttribute="leading" id="jbY-Pz-W5Q"/>
                                                         <constraint firstItem="QqI-RX-T10" firstAttribute="top" secondItem="l72-yo-HOQ" secondAttribute="top" id="pjW-9x-2gY"/>
                                                     </constraints>
                                                     <size key="customSize" width="90" height="120"/>
