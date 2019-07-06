@@ -30,7 +30,7 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if(indexPath.row == 0){
-        let cell = tableView.dequeueReusableCell(withIdentifier: "StoryTableCell") as! StoryTableCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "storyTableCell") as! StoryTableCell
         
         return cell
         }
