@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		840D618C22D09FF4008C6EB3 /* StoryTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840D618B22D09FF4008C6EB3 /* StoryTableCell.swift */; };
+		840D619022D0A3BE008C6EB3 /* PostTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840D618F22D0A3BE008C6EB3 /* PostTableCell.swift */; };
 		84D575B522CF5396006FC0A4 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D575B422CF5396006FC0A4 /* SignUpVC.swift */; };
 		84DB8AA822CF330100AB57CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DB8AA722CF330100AB57CD /* AppDelegate.swift */; };
 		84DB8AAA22CF330100AB57CD /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DB8AA922CF330100AB57CD /* SignInVC.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		840D618B22D09FF4008C6EB3 /* StoryTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryTableCell.swift; sourceTree = "<group>"; };
+		840D618F22D0A3BE008C6EB3 /* PostTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableCell.swift; sourceTree = "<group>"; };
 		84D575B422CF5396006FC0A4 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		84DB8AA422CF330100AB57CD /* Ins.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ins.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DB8AA722CF330100AB57CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +74,8 @@
 				84DB8AA922CF330100AB57CD /* SignInVC.swift */,
 				84D575B422CF5396006FC0A4 /* SignUpVC.swift */,
 				84E3032A22CFE6B000609C4F /* HomeVC.swift */,
+				840D618B22D09FF4008C6EB3 /* StoryTableCell.swift */,
+				840D618F22D0A3BE008C6EB3 /* PostTableCell.swift */,
 				84E3032C22CFE6C100609C4F /* SearchVC.swift */,
 				84E3032E22CFE6E000609C4F /* UploadingVC.swift */,
 				84E3033022CFE73D00609C4F /* ActivityVC.swift */,
@@ -153,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				840D618C22D09FF4008C6EB3 /* StoryTableCell.swift in Sources */,
 				84E3032F22CFE6E000609C4F /* UploadingVC.swift in Sources */,
 				84DB8AAA22CF330100AB57CD /* SignInVC.swift in Sources */,
 				84E3032D22CFE6C100609C4F /* SearchVC.swift in Sources */,
@@ -161,6 +168,7 @@
 				84D575B522CF5396006FC0A4 /* SignUpVC.swift in Sources */,
 				84E3033122CFE73D00609C4F /* ActivityVC.swift in Sources */,
 				84DB8AA822CF330100AB57CD /* AppDelegate.swift in Sources */,
+				840D619022D0A3BE008C6EB3 /* PostTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
