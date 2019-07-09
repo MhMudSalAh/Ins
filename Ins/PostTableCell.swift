@@ -9,7 +9,15 @@
 import UIKit
 
 class PostTableCell: UITableViewCell {
-
+    
+    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var postImage: UIImageView!
+    @IBOutlet weak var postLable: UILabel!
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,4 +29,6 @@ class PostTableCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    
+    
 }

@@ -15,6 +15,10 @@ class StoryTableCell: UITableViewCell, UICollectionViewDelegate, UICollectionVie
    
     @IBOutlet weak var storyCollectioView: UICollectionView!
     
+    let arrayOfImages = [ UIImage(named: "stevejobs"), UIImage(named: "samsung"), UIImage(named: "microsoft"), UIImage(named: "huawei"), UIImage(named: "sony"), UIImage(named: "vodafone") ]
+    
+    let names = [ ("Apple"), ("Samsunge"), ("Microsoft"), ("Huawei"), ("Microsoft"), ("Sony"), ("Vodafone") ]
+    
     
     var delegate: storyDelegate?
     
@@ -33,11 +37,16 @@ class StoryTableCell: UITableViewCell, UICollectionViewDelegate, UICollectionVie
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        
+        return arrayOfImages.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "storyCollectionCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "storyCollectionCell", for: indexPath) as! StoryCollectinCell
+        
+        cell.storyImage.image = self.arrayOfImages[indexPath.row]
+        cell.storyLabel.text = self.names[indexPath.row]
+        
         return cell
     }
     
