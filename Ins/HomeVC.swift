@@ -12,13 +12,13 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
-    let arrayOfImages = [ UIImage(named: "stevejobs"), UIImage(named: "samsung"), UIImage(named: "microsoft"), UIImage(named: "huawei"), UIImage(named: "sony"), UIImage(named: "vodafone") ]
+    var arrayOfImages = [ UIImage(named: "stevejobs"), UIImage(named: "samsung"), UIImage(named: "microsoft"), UIImage(named: "huawei"), UIImage(named: "sony"), UIImage(named: "vodafone") ]
     
-    let locations = [ ("America"), ("Korea"), ("America"), ("Chinese"), ("Japan"), ("Britain") ]
+    var locations = [ ("America"), ("Korea"), ("America"), ("Chinese"), ("Japan"), ("Britain") ]
     
-    let names = [ ("Apple"), ("Samsunge"), ("Microsoft"), ("Huawei"), ("Microsoft"), ("Sony"), ("Vodafone") ]
+    var names = [ ("Apple"), ("Samsunge"), ("Microsoft"), ("Huawei"), ("Microsoft"), ("Sony"), ("Vodafone") ]
     
-    let descriptions = [ ("Apple Company."), ("Samsunge Company."), ("Microsoft Company."), ("Huawei Company."), ("Microsoft Company."), ("Sony Company."), ("Vodafone Company.") ]
+    var descriptions = [ ("Apple Company."), ("Samsunge Company."), ("Microsoft Company."), ("Huawei Company."), ("Microsoft Company."), ("Sony Company."), ("Vodafone Company.") ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,6 +67,15 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
     }
 
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (indexPath.section == 1){
+        if editingStyle == UITableViewCell.EditingStyle.delete {
+            arrayOfImages.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+            }
+        }
+    }
+    
     
 }
 
