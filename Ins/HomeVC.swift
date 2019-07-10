@@ -16,9 +16,9 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var locations = [ ("America"), ("Korea"), ("America"), ("Chinese"), ("Japan"), ("Britain") ]
     
-    var names = [ ("Apple"), ("Samsunge"), ("Microsoft"), ("Huawei"), ("Microsoft"), ("Sony"), ("Vodafone") ]
+    var names = [ ("Apple"), ("Samsunge"), ("Microsoft"), ("Huawei"), ("Sony"), ("Vodafone") ]
     
-    var descriptions = [ ("Apple Company."), ("Samsunge Company."), ("Microsoft Company."), ("Huawei Company."), ("Microsoft Company."), ("Sony Company."), ("Vodafone Company.") ]
+    var descriptions = [ ("Apple Company."), ("Samsunge Company."), ("Microsoft Company."), ("Huawei Company."), ("Sony Company."), ("Vodafone Company.") ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,8 +30,10 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
+       
         return 2
     }
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        
@@ -44,6 +46,8 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
      
     }
     
+    
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if (indexPath.section == 0){
@@ -51,6 +55,7 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         return cell
         }
+            
         else
         {
             
@@ -66,11 +71,31 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         }
         
     }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       
+        let VC = storyboard?.instantiateViewController(withIdentifier: "PostSelectedVC") as! PostSelectedVC
+        
+        VC.nametext = names[indexPath.row]
+        VC.descriptiontext = descriptions[indexPath.row]
+        VC.locationtext = locations[indexPath.row]
+        
+        
+        navigationController?.pushViewController(VC, animated: true)
+     
+    }
+    
 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if (indexPath.section == 1){
         if editingStyle == UITableViewCell.EditingStyle.delete {
+            
             arrayOfImages.remove(at: indexPath.row)
+            descriptions.remove(at: indexPath.row)
+            names.remove(at: indexPath.row)
+            locations.remove(at: indexPath.row)
+            
             tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
             }
         }
