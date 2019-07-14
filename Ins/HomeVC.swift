@@ -80,7 +80,8 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         VC.nametext = names[indexPath.row]
         VC.descriptiontext = descriptions[indexPath.row]
         VC.locationtext = locations[indexPath.row]
-        
+        VC.img = arrayOfImages[indexPath.row]!
+        VC.profileImg = arrayOfImages[indexPath.row]!
         
         navigationController?.pushViewController(VC, animated: true)
      

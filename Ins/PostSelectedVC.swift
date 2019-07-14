@@ -18,16 +18,17 @@ class PostSelectedVC: UIViewController {
     var nametext: String?
     var locationtext: String?
     var descriptiontext: String?
-    var imagepost: UIImageView?
     
-    
+    var img = UIImage()
+    var profileImg = UIImage()
     override func viewDidLoad() {
         super.viewDidLoad()
 
         nameLabel.text = nametext
         locaiotnLabel.text = locationtext
         descriptionLabel.text = descriptiontext
-        
+        postImage.image = img
+        profileImage.image = profileImg
     }
     
 
